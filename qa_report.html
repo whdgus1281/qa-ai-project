@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>QA 리포트</title>
+  <style>
+    body { font-family: sans-serif; padding: 40px; background: #f8f9fa; }
+    h1 { margin-bottom: 24px; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; }
+    .stat { background: white; border: 1px solid #eee; border-radius: 10px; padding: 20px 28px; text-align: center; }
+    .stat-num { font-size: 36px; font-weight: 700; }
+    .stat-label { font-size: 12px; color: #999; margin-top: 4px; }
+    .green { color: #16a34a; }
+    .red   { color: #dc2626; }
+    .blue  { color: #2563eb; }
+    .gold  { color: #d97706; }
+    table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; }
+    th { background: #1e1e1e; color: white; padding: 12px 16px; text-align: left; }
+    td { padding: 12px 16px; border-bottom: 1px solid #f0f0f0; }
+    .pass { background: #d1fae5; color: #065f46; padding: 3px 10px; border-radius: 4px; font-size: 12px; }
+    .fail { background: #fee2e2; color: #991b1b; padding: 3px 10px; border-radius: 4px; font-size: 12px; }
+  </style>
+</head>
+<body>
+
+  <h1>🐛 QA 테스트 리포트</h1>
+
+   <!-- 파이썬이 계산한 통계가 아래 자리에 자동으로 들어가요 -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">10</div>
+      <div class="stat-label">전체 테스트</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num green">7</div>
+      <div class="stat-label">통과 ✅</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num red">3</div>
+      <div class="stat-label">실패 ❌</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num gold">70.0%</div>
+      <div class="stat-label">통과율</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num blue">1.71s</div>
+      <div class="stat-label">평균 시간</div>
+    </div>
+  </div>
+
+    <!-- 위에서 만든 표 행들이 여기 들어가요 -->
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>테스트명</th>
+        <th>결과</th>
+        <th>실행시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>TC-001</td>
+        <td>로그인 성공</td>
+        <td><span class="pass">PASS</span></td>
+        <td>1.2초</td>
+      </tr>
+      <tr>
+        <td>TC-002</td>
+        <td>로그인 실패 처리</td>
+        <td><span class="pass">PASS</span></td>
+        <td>0.8초</td>
+      </tr>
+      <tr>
+        <td>TC-003</td>
+        <td>비밀번호 변경</td>
+        <td><span class="fail">FAIL</span></td>
+        <td>2.1초</td>
+      </tr>
+      <tr>
+        <td>TC-004</td>
+        <td>회원가입</td>
+        <td><span class="pass">PASS</span></td>
+        <td>1.5초</td>
+      </tr>
+      <tr>
+        <td>TC-005</td>
+        <td>로그아웃</td>
+        <td><span class="pass">PASS</span></td>
+        <td>0.5초</td>
+      </tr>
+      <tr>
+        <td>TC-006</td>
+        <td>상품 검색</td>
+        <td><span class="fail">FAIL</span></td>
+        <td>3.2초</td>
+      </tr>
+      <tr>
+        <td>TC-007</td>
+        <td>장바구니 추가</td>
+        <td><span class="pass">PASS</span></td>
+        <td>1.1초</td>
+      </tr>
+      <tr>
+        <td>TC-008</td>
+        <td>결제 처리</td>
+        <td><span class="fail">FAIL</span></td>
+        <td>4.5초</td>
+      </tr>
+      <tr>
+        <td>TC-009</td>
+        <td>주문 내역 조회</td>
+        <td><span class="pass">PASS</span></td>
+        <td>0.9초</td>
+      </tr>
+      <tr>
+        <td>TC-010</td>
+        <td>리뷰 작성</td>
+        <td><span class="pass">PASS</span></td>
+        <td>1.3초</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
